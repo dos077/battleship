@@ -1,7 +1,7 @@
-import Ship from '@/ship.js'
+import Ship from '@/Ship.js'
 
 describe('Ship size 3', () => {
-  const testShip = Ship({size: 3});
+  const testShip = Ship({size: 3, name: 'Destroyer'});
 
   it('floats', () => {
     expect(testShip.isSunk()).toBe(false);
@@ -15,5 +15,6 @@ describe('Ship size 3', () => {
   it('sinks after 3 hits', () => {
     testShip.hit(2);
     expect(testShip.isSunk()).toBe(true);
+    expect(testShip.name).toBe('Destroyer');
   })
 });

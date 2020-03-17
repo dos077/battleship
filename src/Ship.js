@@ -1,4 +1,6 @@
-const Ship = ({size}) => {
+const Ship = ({size, name}) => {
+  const crds = [];
+
   const hp = new Array(size).fill(1);
   const hit = (n) => {
     hp[n] = 0;
@@ -9,7 +11,11 @@ const Ship = ({size}) => {
     return (totalHp == 0)? true : false;
   }
 
-  return { hit, isSunk }
+  const addCrd = (crd) => {
+    crds.push(crd);
+  }
+
+  return { hit, isSunk, name, crds, addCrd, size }
 }
 
 export default Ship

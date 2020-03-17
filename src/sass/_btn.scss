@@ -1,0 +1,31 @@
+[class*='btn-'] {
+  position: relative;
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    filter:  
+      drop-shadow(1px 1px 0 rgba(white, .8))
+      drop-shadow(.1rem .1rem .1rem rgba(black, .6));
+  }
+}
+.btn-add::before {
+  clip-path: polygon(0 40%, 40% 40%, 40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%);
+}
+.btn-subtract::before {
+  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+}
+.btn-more::before {
+  clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%, 0 42%, 100% 42%, 100% 57%, 0 57%, 0 85%, 100% 85%, 100% 100%, 0 100%);
+}
+.btn-close::before {
+  clip-path: polygon(15% 0%, 0% 15%, 35% 50%, 0% 85%, 15% 100%, 50% 65%, 85% 100%, 100% 85%, 65% 50%, 100% 15%, 85% 0%, 50% 35%);
+}
+.btn-okay::before {
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+html {
+  font-family: Impact, 'Anton', Arial;
+  font-size: 2.5vw;
+  user-select: none;
+  @include breakPoint(1280) {
+    font-size: 32px;
+  }
+}
+
+body {
+  color: $prime-color;
+  line-height: 1.3em;
+}
+
+h1 { font-size: 2.6em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.26em; }
+
+p,h3,h4 {
+  display: block;
+  @include breakPoint(500) {
+    max-width: 37rem;
+  }
+  @include breakPoint(1000) {
+    max-width: 49rem;
+  }
+}
+
+
+.edit{
+  border: .1rem dashed black;
+}
